@@ -2,8 +2,9 @@ var allInputs = $(':input');
 allInputs.each(function(inp) {
   var inType = ($(this).attr('type'));
   if (inType == undefined) {
-    console.log($(this).attr('name'))
-    $(this).val('blue');
+    inType = ($(this).attr('name'))
+    var value = getValueEntered($(this));
+    $(this).val(value);
     setValueEntered($(this));
   }
   else {
